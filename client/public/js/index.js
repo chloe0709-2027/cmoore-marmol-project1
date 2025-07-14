@@ -9,3 +9,17 @@ function checkKeyPress(e) {
     goToLocation('/feed');
   }
 }
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('fade_text').addEventListener('click', function() {
+    goToLocation('/feed');
+  })
+  document.addEventListener('keydown', function (event) {
+    checkKeyPress(event);
+  })
+})
+
+function checkKeyPress(event) {
+  if (event.code === 'Space') {
+    goToLocation('/feed')
+  }
+}
